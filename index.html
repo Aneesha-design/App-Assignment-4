@@ -32,30 +32,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-//These count variables count the number of times the user answered for a cold or allergy result.
-        var allergy_count = 0;
-        var cold_count = 0;
+//These count variables count the number of times the user answered for a melanoma or normal result.
+        var melanoma_count = 0;
+        var normal_count = 0;
 
-//This function counts the number of allergy responses by adding one to every response.
-       	function allergyAdd(){	
-        allergy_count = allergy_count + 1;
+//This function counts the number of melanoma responses by adding one to every response.
+       	function melanomaAdd(){	
+        melanoma_count = melanoma_count + 1;
 	}
 
-//This function counts the number of cold responses by adding one to every response.	
-        function coldAdd(){
-        cold_count = cold_count + 1;
+//This function counts the number of normal responses by adding one to every response.	
+        function normalAdd(){
+        normal_count = normal_count + 1;
         }
 	
-//This function calculates the percent of cold responses and allergy responses by multiplying by the number of question (6) and dividing bu 100.
+//This function calculates the % of melanoma and normal responses by multiplying by the number of responses (5) and dividing by 100.
 	function resultpercentage() {	
 //resultText variable stores the resultspercentage function so it can be called later in the results page
 	var resultText = document.getElementById("results");
 	// This innerHTML outputs the resultsText variable onto the "results" page
-	resultText.innerHTML = "Probability it is allergies = " + allergy_count /6 *100 + "<br> Probability it is a cold =" + cold_count /6 *100;
+	resultText.innerHTML = "% Chance the Blemish is a Sign of Melanoma = " + melanoma_count /5 *100 + 
+	"<br> % Chance the Blemish is a Normal =" + normal_count /5 *100;
 	}
 </script>
-
-
+	
+<!--The following style code establishes basic format details such as page width, margins, and background color-->
 <style>	
 .body {
      margin: 0em;
@@ -78,43 +79,50 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
+
 <body>
 <div id="header" class="w3-container w3-pale-red">
 	<h1>Is It Skin Cancer?</h1>
 </div>
 	
+	
 <div id="content" class="w3-container">
-<!--The following is opening text introducing the app on an intro page-->
-	<!--The first statement was made bold-->
+<!--The following is an opening bold statement introducing the app on the "content" page-->
 	<b>Unusual blemishes and bumps might be an indicator melanoma or other types of skin cancer.
 	Use this app to calculate the likelihood that a melanoma might be developing.</b>
 	
-	<a href="#one" class="w3-btn w3-pale-blue w3-round"> Get Started </a>
-	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	<!--Disclaimer warning below-->
+<!--Get Started button below. Directs user to page 1.-->
+	<a href="#one" class="w3-circle w3-pale-red w3-round"> Get Started </a>
+
+<!--Disclaimer warning below-->
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics 
+	Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a 
+	product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream,
+	FRI, and The University of Texas system are not liable for anything related to this code.</p
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-		
+</div>
+	
+	
 <!--BEGINNING OF PAGE 1. Includes Question 1 and counts response-->
 <div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-carrot">
-	<!--Page 1 heading below-->
-		<h1>Question1</h1>
+	<div id="header" class="w3-container w3-pale-red">
+<!--Page 1 heading below-->
+		<h1>Asymmetry</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-	<!--Question 1 content below-->
-	<p>Are your eyes watery or itchy?</p>  
-	<!--Button "yes" counts towards allegry. Button "no" counts for cold.-->
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-    	</div>
+<!--Question 1 content below-->
+	<p>Is the blemish asymetrical?</p>  
+	<p>It is asymmentrical if one half of the mole or birthmark does not match the other half.</p>  
+<!--Button "yes" counts towards melanoma. Button "no" counts for normal.-->
+	<a href="#two"  onclick="melanomaAdd();" class="w3-btn w3-pale-red"> Yes</a>
+        <a href="#two"  onclick="normalAdd();" class="w3-btn w3-pale-red">No</a>
 </div>
-	
+
 
 <!--BEGINNING OF PAGE 2. Includes Question 2 and counts response-->
 <div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-pale-red">
 	<!--Page 2 heading below-->
 		<h1>Question 2</h1>
 	</div>
@@ -123,15 +131,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--Question 2 content below-->
 		<p>Do you have a fever?</p>
 	<!--Button "yes" counts towards cold. Button "no" counts for allergy.-->
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-pale-red"> Yes</a>
+        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-pale-red">No</a>
 	</div>
 </div>
 	
 	
 <!--BEGINNING OF PAGE 3. Includes Question 3 and counts response-->
 <div class="page" id="three">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-pale-red">
 	<!--Page 3 heading below-->
 		<h1>Question 3</h1>
 	</div>
@@ -140,15 +148,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--Question 3 content below-->
 		<p>Do you have a sore throat?</p>
 	<!--Button "yes" counts towards cold. Button "no" counts for allergy.-->
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-pale-red"> Yes</a>
+        <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-pale-red">No</a>
 	</div>
 </div>
 	
 
 <!--BEGINNING OF PAGE 4. Includes Question 4 and counts response-->
 <div class="page" id="four">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-pale-red">
 	<!--Page 4 heading below-->
 		<h1>Question 4</h1>
 	</div>
@@ -157,15 +165,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--Question 4 content below-->
 		<p>Are your symptoms seasonal or chronic?</p>
 	<!--Button "Seasonal" counts towards allergy. Button "Chronic" counts for cold.-->
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal</a>
-        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">Chronic</a>
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-pale-red"> Seasonal</a>
+        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-pale-red">Chronic</a>
 	</div>
 </div>	
 	
 	
 <!--BEGINNING OF PAGE 5. Includes Question 5 and counts response-->
 <div class="page" id="five">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-pale-red">
 	<!--Page 5 heading below-->
 		<h1>Question 5</h1>
 	</div>
@@ -174,15 +182,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--Question 5 content below-->
 		<p>Do you experience wheezing?</p>
 	<!--Button "yes" counts towards allergy. Button "no" counts for cold.-->
-	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-pale-red"> Yes</a>
+        <a href="#six"  onclick="coldAdd();" class="w3-btn w3-pale-red">No</a>
 	</div>
 </div>	
 
 
 <!--BEGINNING OF PAGE 6. Includes Question 6 and counts response-->
 <div class="page" id="six">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-pale-red">
 	<!--Page 6 heading below-->
 		<h1>Question 6</h1>
 	</div>
@@ -191,22 +199,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--Question 6 content below-->
 		<p>Do you have body aches or pains?</p>
 	<!--Button "yes" counts towards cold. Button "no" counts for allegry.-->
-	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#results"  onclick="allegryAdd();" class="w3-btn w3-black">No</a>
+	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-pale-red"> Yes</a>
+        <a href="#results"  onclick="allegryAdd();" class="w3-btn w3-pale-red">No</a>
 	</div>
 </div>	
 	
 	
 <!--BEGINNING OF PAGE RESULTS. Includes Results Section. Displays the result of the user's responses-->
 <div class="page" id="results">
-	<div id= ="header" class="w3-container w3-flat-carrot">
+	<div id= ="header" class="w3-container w3-pale-red">
 	<!--Results heading below-->
 		<h1>Results!</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<!--Results button below. Brings the resultpercentage function from script to display on click-->
-		<a href="#results"  onclick="resultpercentage();" class="w3-btn w3-black"> See your results</a>
+		<a href="#results"  onclick="resultpercentage();" class="w3-btn w3-pale-red"> See your results</a>
 	</div>
 </div>	
 
@@ -214,7 +222,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>	
 
 <!--Footer content below. Text shows up at the bottom of the page.-->
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-pale-red">
 	<p>DIY Is Fun!</p>
 </footer>
 
