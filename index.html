@@ -92,7 +92,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	Use this app to calculate the likelihood that a melanoma might be developing.</b>
 	
 <!--Get Started button below. Directs user to page 1.-->
-	<a href="#one" class="w3-circle w3-pale-red w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-pale-red w3-round"> Get Started </a>
 
 <!--Disclaimer warning below-->
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics 
@@ -106,17 +106,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--BEGINNING OF PAGE 1. Includes Question 1 and counts response-->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-pale-red">
-<!--Page 1 heading below-->
+	<!--Page 1 heading below-->
 		<h1>Asymmetry</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-<!--Question 1 content below-->
-	<p>Is the blemish asymetrical?</p>  
-	<p>It is asymmentrical if one half of the mole or birthmark does not match the other half.</p>  
-<!--Button "yes" counts towards melanoma. Button "no" counts for normal.-->
-	<a href="#two"  onclick="melanomaAdd();" class="w3-btn w3-pale-red"> Yes</a>
-        <a href="#two"  onclick="normalAdd();" class="w3-btn w3-pale-red">No</a>
+	<div id="content" class="w3-container">
+	<!--Question 1 content below-->
+		<p>Is the blemish asymetrical?</p>  
+		<p>It is asymmentrical if one half of the mole or birthmark does not match the other half.</p>  
+	<!--Button "yes" counts towards melanoma. Button "no" counts for normal.-->
+		<a href="#two"  onclick="melanomaAdd();" class="w3-btn w3-pale-red">Yes</a>
+       		<a href="#two"  onclick="normalAdd();" class="w3-btn w3-pale-red">No</a>
+	</div>
 </div>
 
 
@@ -124,15 +125,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="two">
 	<div class="w3-container w3-pale-red">
 	<!--Page 2 heading below-->
-		<h1>Question 2</h1>
+		<h1>Borders</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<!--Question 2 content below-->
-		<p>Do you have a fever?</p>
-	<!--Button "yes" counts towards cold. Button "no" counts for allergy.-->
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-pale-red"> Yes</a>
-        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-pale-red">No</a>
+		<p>Are the borders of the blemish abnormal or blurred?</p>
+	<!--Button "yes" counts towards melanoma. Button "no" counts for normal.-->
+		<a href="#three"  onclick="melanomaAdd();" class="w3-btn w3-pale-red">Yes</a>
+       		<a href="#three"  onclick="normalAdd();" class="w3-btn w3-pale-red">No</a>
 	</div>
 </div>
 	
@@ -141,15 +142,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="three">
 	<div class="w3-container w3-pale-red">
 	<!--Page 3 heading below-->
-		<h1>Question 3</h1>
+		<h1>Color</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<!--Question 3 content below-->
-		<p>Do you have a sore throat?</p>
-	<!--Button "yes" counts towards cold. Button "no" counts for allergy.-->
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-pale-red"> Yes</a>
-        <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-pale-red">No</a>
+		<p>Is the color even?</p>
+		<p>If the blemish color is uneven with varying shades, select "No" </p>
+	<!--Button "yes" counts towards normal. Button "no" counts for melanoma.-->
+	<a href="#four"  onclick="normalAdd();" class="w3-btn w3-pale-red">Yes</a>
+        <a href="#four"  onclick="melanomaAdd();" class="w3-btn w3-pale-red">No</a>
 	</div>
 </div>
 	
@@ -158,15 +160,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="four">
 	<div class="w3-container w3-pale-red">
 	<!--Page 4 heading below-->
-		<h1>Question 4</h1>
+		<h1>Diameter</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<!--Question 4 content below-->
-		<p>Are your symptoms seasonal or chronic?</p>
-	<!--Button "Seasonal" counts towards allergy. Button "Chronic" counts for cold.-->
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-pale-red"> Seasonal</a>
-        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-pale-red">Chronic</a>
+		<p>Measure the approximate diameter (length from edge to edge, passing through the center) of the blemish/mole.</p>
+		<p>Is this diameter larger than 6mm? This is </p>
+		<p>*note: 6 mm ~ 0.25 inch or about the size of an eraser on the back of a pencil.</p>
+	<!--Button "Yes" counts towards melanoma. Button "No" counts for normal.-->
+	<a href="#five"  onclick="melanomaAdd();" class="w3-btn w3-pale-red">Yes</a>
+        <a href="#five"  onclick="normalAdd();" class="w3-btn w3-pale-red">No</a>
 	</div>
 </div>	
 	
@@ -175,32 +179,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="five">
 	<div class="w3-container w3-pale-red">
 	<!--Page 5 heading below-->
-		<h1>Question 5</h1>
+		<h1>Evolving</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<!--Question 5 content below-->
-		<p>Do you experience wheezing?</p>
-	<!--Button "yes" counts towards allergy. Button "no" counts for cold.-->
-	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-pale-red"> Yes</a>
-        <a href="#six"  onclick="coldAdd();" class="w3-btn w3-pale-red">No</a>
-	</div>
-</div>	
-
-
-<!--BEGINNING OF PAGE 6. Includes Question 6 and counts response-->
-<div class="page" id="six">
-	<div class="w3-container w3-pale-red">
-	<!--Page 6 heading below-->
-		<h1>Question 6</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<!--Question 6 content below-->
-		<p>Do you have body aches or pains?</p>
-	<!--Button "yes" counts towards cold. Button "no" counts for allegry.-->
-	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-pale-red"> Yes</a>
-        <a href="#results"  onclick="allegryAdd();" class="w3-btn w3-pale-red">No</a>
+		<p>Have you noticed the blemish changing in either size, shape, or color?</p>
+	<!--Button "yes" counts towards melanoma. Button "no" counts for normal.-->
+	<a href="#results"  onclick="melanomaAdd();" class="w3-btn w3-pale-red">Yes</a>
+        <a href="#results"  onclick="normalAdd();" class="w3-btn w3-pale-red">No</a>
 	</div>
 </div>	
 	
@@ -209,12 +196,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="results">
 	<div id= ="header" class="w3-container w3-pale-red">
 	<!--Results heading below-->
-		<h1>Results!</h1>
+		<h1>Results</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<!--Results button below. Brings the resultpercentage function from script to display on click-->
 		<a href="#results"  onclick="resultpercentage();" class="w3-btn w3-pale-red"> See your results</a>
+	<!--Note displayed below the button-->
+		<b> Note that not all melanomas follow the rules of ABCD. It is important not any new appearances and to see a doctor
+		for accurate testing. </b>
+		
+		<p>Other possible factors of melanoma to keep note of include:</p>
+		<p>spreading</p>
+		<p>itchiness</p>
+		<p>tenderness</p>
+		<p>pain (not in all cases)</p>
+		<p>oozing</p>
+		<p>bleeding</p>
+		<p>presence of a lump</p>	
 	</div>
 </div>	
 
