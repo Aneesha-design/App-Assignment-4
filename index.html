@@ -82,12 +82,18 @@ img, object{
     max-height:90%;
     max-width:90%;
 }
+	
+.button {
+  padding: 90px 32px;
+  text-align: center;
+  cursor: pointer;
+}
 
 </style>
 
 
-<!--Begins the body (all the content) of the app-->
-<body>
+<!--Begins the body (all the content) of the app. Body's color also set in the code below.-->
+<body style="background-color:lightgrey;">
 	<!--Header of the app below-->
 	<div id="header" class="w3-container w3-pale-red">
 		<h1>Is It Skin Cancer?</h1>
@@ -103,7 +109,7 @@ img, object{
 		<a href="#one" class="w3-btn w3-pale-red w3-round"> Get Started </a>
 	
 	<!--An image is displayed below-->
-		<a href="https://ibb.co/XSJrJpw"><img src="https://i.ibb.co/Bqs5sj1/cancer.jpg" alt="cancer" border="0"></a>
+		<a href="https://ibb.co/XSJrJpw"><img src="https://i.ibb.co/Bqs5sj1/cancer.jpg" alt="cancer" border="1"></a>
 		
 	<!--Disclaimer warning below-->
 		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics 
@@ -216,15 +222,17 @@ img, object{
 	<!--Note displayed below the button-->
 		<b> Note that not all melanomas follow the rules of ABCD. It is important not any new appearances and to see a doctor
 		for accurate testing. </b>
-		
 		<p>Other possible factors of melanoma to keep note of include:</p>
-		<p>spreading</p>
-		<p>itchiness</p>
-		<p>tenderness</p>
-		<p>pain (not in all cases)</p>
-		<p>oozing</p>
-		<p>bleeding</p>
-		<p>presence of a lump</p>
+	<!--The code below displays text in a list format-->
+		<ul style="list-style-type:square;">
+		<li>spreading</li>
+		<li>itchiness</li>
+		<li>tenderness</li>
+		<li>pain (not in all cases)</li>
+		<li>oozing</li>
+		<li>bleeding</li>
+		<li>presence of a lump</li>
+			
 	<!--This button directs user to page 6 (sources sited)-->
 		<a href="#references" class="w3-btn w3-pale-red">References</a>
 	</div>
